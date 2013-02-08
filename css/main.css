@@ -1,0 +1,7 @@
+#moldraw {
+    border : 1px solid black;
+}
+
+#toolbar .btn.active {
+    background-color : yellow;
+}
