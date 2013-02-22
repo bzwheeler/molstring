@@ -6,29 +6,37 @@ define([
 	'Backbone',
 	'model/Molecule',
 	'model/Atom',
-	'model/Bond'
-], function($, _, JXG, EventManager, Backbone, Molecule, Atom, Bond) {
+	'model/Bond',
+	'json!data/elements.json'
+], function($, _, JXG, EventManager, Backbone, Molecule, Atom, Bond, elements) {
 
 	var View = Backbone.View.extend({
 		events: {
-			'keyup #jxgbox' : 'handleKeyPress'
+			'keyup'    : 'handleKeyPress',
+			'keypress' : 'handleKeyPress'
 		},
 		subscribers: {},
+		elements: {},
 
 		initialize : function(options) {
+			// setup perodic table elements
+			this.elements = elements;
+
 			var molecule = new Molecule();
 			this.ATOM_COUNT = 0;
 			this.bondList = {};
 			this.BOND_COUNT = 0;
 			this.board = this.buildJSXBoard();
+
+			$(document).bind('keyup', $.proxy(this.handleKeyPress, this));
 		},
 
 		handleKeyPress : function(e) {
-			if( e.keyCode == 27 ) {
+			if (e.keyCode == 27) {
 		        if (this.hook) this.killBond(true);
 		        if (this.editing) this.stopEditing();
-		    } else if ( e.keyCode == 46 && this.editing ) {
-		    } else if ( this.editing && e.keyCode >= 65 && e.keyCode <= 91 ) {
+		    } else if (e.keyCode == 46 && this.editing) {
+		    } else if (this.editing && e.keyCode >= 65 && e.keyCode <= 91) {
 		        this.editing.symbol.setText(String.fromCharCode(e.keyCode));
 		        this.board.update();
 		    }
@@ -46,7 +54,7 @@ define([
 			JXG.Options.grid.dash = 0;
 
 			var board = JXG.JSXGraph.initBoard('jxgbox',{
-				boundingbox:[0,10,20,0],
+				boundingbox:[0,30,40,0],
 				shownavigation:false
 			});
 			board.addGrid();
@@ -146,13 +154,14 @@ define([
 		createAtom : function(x, y, visible) {
 		    x = Math.round(x);
 		    y = Math.round(y);
+		    var element = new Atom();
 		    var atom = this.board.create('point', [x, y], {
 		        withLabel:false,
 		        showInfobox:false,
 		        visible:visible,
-		        size:7,
-		        fillColor:'#FFFFFF',
-		        strokeColor:'#000000'
+		        size:14,
+		        fillColor: element.get('color'),
+		        strokeColor: element.get('stroke_color')
 		    });
 		    atom.show = function() {
 		        this.setAttribute({visible:true});
@@ -160,7 +169,7 @@ define([
 		    }
 		    atom.id = this.ATOM_COUNT++;
 		    atom.bonds = [];
-		    atom.symbol = this.board.create('text', [function(){return atom.X() - 0.2}, function(){return atom.Y() - 0.160}, 'C'], {visible:visible});
+		    atom.symbol = this.board.create('text', [function(){return atom.X() - 0.2}, function(){return atom.Y() - 0.160}, element.get('symbol')], {visible:visible});
 		    
 		    return atom;
 		},

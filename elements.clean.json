@@ -1,0 +1,946 @@
+{
+	"Hydrogen": {
+		"symbol": "H",
+		"atomic_number": 1,
+		"atomic_weight": 1.0079400000000001,
+		"lattice_structure": "HEX",
+		"name": "Hydrogen",
+		"color": "#C7C8CA"
+	},
+	"Helium": {
+		"symbol": "He",
+		"atomic_number": 2,
+		"atomic_weight": 4.0026020000000004,
+		"lattice_structure": "HEX",
+		"name": "Helium",
+		"color": "#C7C8CA"
+	},
+	"Lithium": {
+		"symbol": "Li",
+		"atomic_number": 3,
+		"atomic_weight": 6.9409999999999998,
+		"lattice_structure": "BCC",
+		"name": "Lithium",
+		"color": "#C7C8CA"
+	},
+	"Beryllium": {
+		"symbol": "Be",
+		"atomic_number": 4,
+		"atomic_weight": 9.0121800000000007,
+		"lattice_structure": "HEX",
+		"name": "Beryllium",
+		"color": "#C7C8CA"
+	},
+	"Boron": {
+		"symbol": "B",
+		"atomic_number": 5,
+		"atomic_weight": 10.811,
+		"lattice_structure": "TET",
+		"name": "Boron",
+		"color": "#C7C8CA"
+	},
+	"Carbon": {
+		"symbol": "C",
+		"atomic_number": 6,
+		"atomic_weight": 12.010999999999999,
+		"lattice_structure": "DIA",
+		"name": "Carbon",
+		"color": "#C7C8CA"
+	},
+	"Nitrogen": {
+		"symbol": "N",
+		"atomic_number": 7,
+		"atomic_weight": 14.006740000000001,
+		"lattice_structure": "HEX",
+		"name": "Nitrogen",
+		"color": "#C7C8CA"
+	},
+	"Oxygen": {
+		"symbol": "O",
+		"atomic_number": 8,
+		"atomic_weight": 15.9994,
+		"lattice_structure": "CUB",
+		"name": "Oxygen",
+		"color": "#C7C8CA"
+	},
+	"Fluorine": {
+		"symbol": "F",
+		"atomic_number": 9,
+		"atomic_weight": 18.998403,
+		"lattice_structure": "MCL",
+		"name": "Fluorine",
+		"color": "#C7C8CA"
+	},
+	"Neon": {
+		"symbol": "Ne",
+		"atomic_number": 10,
+		"atomic_weight": 20.1797,
+		"lattice_structure": "FCC",
+		"name": "Neon",
+		"color": "#C7C8CA"
+	},
+	"Sodium": {
+		"symbol": "Na",
+		"atomic_number": 11,
+		"atomic_weight": 22.989768000000002,
+		"lattice_structure": "BCC",
+		"name": "Sodium",
+		"color": "#C7C8CA"
+	},
+	"Magnesium": {
+		"symbol": "Mg",
+		"atomic_number": 12,
+		"atomic_weight": 24.305,
+		"lattice_structure": "HEX",
+		"name": "Magnesium",
+		"color": "#C7C8CA"
+	},
+	"Aluminum": {
+		"symbol": "Al",
+		"atomic_number": 13,
+		"atomic_weight": 26.981539000000001,
+		"lattice_structure": "FCC",
+		"name": "Aluminum",
+		"color": "#C7C8CA"
+	},
+	"Silicon": {
+		"symbol": "Si",
+		"atomic_number": 14,
+		"atomic_weight": 28.0855,
+		"lattice_structure": "DIA",
+		"name": "Silicon",
+		"color": "#C7C8CA"
+	},
+	"Phosphorus": {
+		"symbol": "P",
+		"atomic_number": 15,
+		"atomic_weight": 30.973762000000001,
+		"lattice_structure": "CUB",
+		"name": "Phosphorus",
+		"color": "#C7C8CA"
+	},
+	"Sulfur": {
+		"symbol": "S",
+		"atomic_number": 16,
+		"atomic_weight": 32.066000000000003,
+		"lattice_structure": "ORC",
+		"name": "Sulfur",
+		"color": "#C7C8CA"
+	},
+	"Chlorine": {
+		"symbol": "Cl",
+		"atomic_number": 17,
+		"atomic_weight": 35.4527,
+		"lattice_structure": "ORC",
+		"name": "Chlorine",
+		"color": "#C7C8CA"
+	},
+	"Argon": {
+		"symbol": "Ar",
+		"atomic_number": 18,
+		"atomic_weight": 39.948,
+		"lattice_structure": "FCC",
+		"name": "Argon",
+		"color": "#C7C8CA"
+	},
+	"Potassium": {
+		"symbol": "K",
+		"atomic_number": 19,
+		"atomic_weight": 39.098300000000002,
+		"lattice_structure": "BCC",
+		"name": "Potassium",
+		"color": "#C7C8CA"
+	},
+	"Calcium": {
+		"symbol": "Ca",
+		"atomic_number": 20,
+		"atomic_weight": 40.078000000000003,
+		"lattice_structure": "FCC",
+		"name": "Calcium",
+		"color": "#C7C8CA"
+	},
+	"Scandium": {
+		"symbol": "Sc",
+		"atomic_number": 21,
+		"atomic_weight": 44.955910000000003,
+		"lattice_structure": "HEX",
+		"name": "Scandium",
+		"color": "#C7C8CA"
+	},
+	"Titanium": {
+		"symbol": "Ti",
+		"atomic_number": 22,
+		"atomic_weight": 47.880000000000003,
+		"lattice_structure": "HEX",
+		"name": "Titanium",
+		"color": "#C7C8CA"
+	},
+	"Vanadium": {
+		"symbol": "V",
+		"atomic_number": 23,
+		"atomic_weight": 50.941499999999998,
+		"lattice_structure": "BCC",
+		"name": "Vanadium",
+		"color": "#C7C8CA"
+	},
+	"Chromium": {
+		"symbol": "Cr",
+		"atomic_number": 24,
+		"atomic_weight": 51.996099999999998,
+		"lattice_structure": "BCC",
+		"name": "Chromium",
+		"color": "#C7C8CA"
+	},
+	"Manganese": {
+		"symbol": "Mn",
+		"atomic_number": 25,
+		"atomic_weight": 54.938049999999997,
+		"lattice_structure": "CUB",
+		"name": "Manganese",
+		"color": "#C7C8CA"
+	},
+	"Iron": {
+		"symbol": "Fe",
+		"atomic_number": 26,
+		"atomic_weight": 55.847000000000001,
+		"lattice_structure": "BCC",
+		"name": "Iron",
+		"color": "#C7C8CA"
+	},
+	"Cobalt": {
+		"symbol": "Co",
+		"atomic_number": 27,
+		"atomic_weight": 58.933199999999999,
+		"lattice_structure": "HEX",
+		"name": "Cobalt",
+		"color": "#C7C8CA"
+	},
+	"Nickel": {
+		"symbol": "Ni",
+		"atomic_number": 28,
+		"atomic_weight": 58.693399999999997,
+		"lattice_structure": "FCC",
+		"name": "Nickel",
+		"color": "#C7C8CA"
+	},
+	"Copper": {
+		"symbol": "Cu",
+		"atomic_number": 29,
+		"atomic_weight": 63.545999999999999,
+		"lattice_structure": "FCC",
+		"name": "Copper",
+		"color": "#C7C8CA"
+	},
+	"Zinc": {
+		"symbol": "Zn",
+		"atomic_number": 30,
+		"atomic_weight": 65.390000000000001,
+		"lattice_structure": "HEX",
+		"name": "Zinc",
+		"color": "#C7C8CA"
+	},
+	"Gallium": {
+		"symbol": "Ga",
+		"atomic_number": 31,
+		"atomic_weight": 69.722999999999999,
+		"lattice_structure": "ORC",
+		"name": "Gallium",
+		"color": "#C7C8CA"
+	},
+	"Germanium": {
+		"symbol": "Ge",
+		"atomic_number": 32,
+		"atomic_weight": 72.609999999999999,
+		"lattice_structure": "DIA",
+		"name": "Germanium",
+		"color": "#C7C8CA"
+	},
+	"Arsenic": {
+		"symbol": "As",
+		"atomic_number": 33,
+		"atomic_weight": 74.921589999999995,
+		"lattice_structure": "RHL",
+		"name": "Arsenic",
+		"color": "#C7C8CA"
+	},
+	"Selenium": {
+		"symbol": "Se",
+		"atomic_number": 34,
+		"atomic_weight": 78.959999999999994,
+		"lattice_structure": "HEX",
+		"name": "Selenium",
+		"color": "#C7C8CA"
+	},
+	"Bromine": {
+		"symbol": "Br",
+		"atomic_number": 35,
+		"atomic_weight": 79.903999999999996,
+		"lattice_structure": "ORC",
+		"name": "Bromine",
+		"color": "#C7C8CA"
+	},
+	"Krypton": {
+		"symbol": "Kr",
+		"atomic_number": 36,
+		"atomic_weight": 83.799999999999997,
+		"lattice_structure": "FCC",
+		"name": "Krypton",
+		"color": "#C7C8CA"
+	},
+	"Rubidium": {
+		"symbol": "Rb",
+		"atomic_number": 37,
+		"atomic_weight": 85.467799999999997,
+		"lattice_structure": "BCC",
+		"name": "Rubidium",
+		"color": "#C7C8CA"
+	},
+	"Strontium": {
+		"symbol": "Sr",
+		"atomic_number": 38,
+		"atomic_weight": 87.620000000000005,
+		"lattice_structure": "FCC",
+		"name": "Strontium",
+		"color": "#C7C8CA"
+	},
+	"Yttrium": {
+		"symbol": "Y",
+		"atomic_number": 39,
+		"atomic_weight": 88.905850000000001,
+		"lattice_structure": "HEX",
+		"name": "Yttrium",
+		"color": "#C7C8CA"
+	},
+	"Zirconium": {
+		"symbol": "Zr",
+		"atomic_number": 40,
+		"atomic_weight": 91.224000000000004,
+		"lattice_structure": "HEX",
+		"name": "Zirconium",
+		"color": "#C7C8CA"
+	},
+	"Niobium": {
+		"symbol": "Nb",
+		"atomic_number": 41,
+		"atomic_weight": 92.906379999999999,
+		"lattice_structure": "BCC",
+		"name": "Niobium",
+		"color": "#C7C8CA"
+	},
+	"Molybdenum": {
+		"symbol": "Mo",
+		"atomic_number": 42,
+		"atomic_weight": 95.939999999999998,
+		"lattice_structure": "BCC",
+		"name": "Molybdenum",
+		"color": "#C7C8CA"
+	},
+	"Technetium": {
+		"symbol": "Tc",
+		"atomic_number": 43,
+		"atomic_weight": 97.907200000000003,
+		"lattice_structure": "HEX",
+		"name": "Technetium",
+		"color": "#C7C8CA"
+	},
+	"Ruthenium": {
+		"symbol": "Ru",
+		"atomic_number": 44,
+		"atomic_weight": 101.06999999999999,
+		"lattice_structure": "HEX",
+		"name": "Ruthenium",
+		"color": "#C7C8CA"
+	},
+	"Rhodium": {
+		"symbol": "Rh",
+		"atomic_number": 45,
+		"atomic_weight": 102.9055,
+		"lattice_structure": "FCC",
+		"name": "Rhodium",
+		"color": "#C7C8CA"
+	},
+	"Palladium": {
+		"symbol": "Pd",
+		"atomic_number": 46,
+		"atomic_weight": 106.42,
+		"lattice_structure": "FCC",
+		"name": "Palladium",
+		"color": "#C7C8CA"
+	},
+	"Silver": {
+		"symbol": "Ag",
+		"atomic_number": 47,
+		"atomic_weight": 107.8682,
+		"lattice_structure": "FCC",
+		"name": "Silver",
+		"color": "#C7C8CA"
+	},
+	"Cadmium": {
+		"symbol": "Cd",
+		"atomic_number": 48,
+		"atomic_weight": 112.411,
+		"lattice_structure": "HEX",
+		"name": "Cadmium",
+		"color": "#C7C8CA"
+	},
+	"Indium": {
+		"symbol": "In",
+		"atomic_number": 49,
+		"atomic_weight": 114.818,
+		"lattice_structure": "TET",
+		"name": "Indium",
+		"color": "#C7C8CA"
+	},
+	"Tin": {
+		"symbol": "Sn",
+		"atomic_number": 50,
+		"atomic_weight": 118.70999999999999,
+		"lattice_structure": "TET",
+		"name": "Tin",
+		"color": "#C7C8CA"
+	},
+	"Antimony": {
+		"symbol": "Sb",
+		"atomic_number": 51,
+		"atomic_weight": 121.76000000000001,
+		"lattice_structure": "RHL",
+		"name": "Antimony",
+		"color": "#C7C8CA"
+	},
+	"Tellurium": {
+		"symbol": "Te",
+		"atomic_number": 52,
+		"atomic_weight": 127.59999999999999,
+		"lattice_structure": "HEX",
+		"name": "Tellurium",
+		"color": "#C7C8CA"
+	},
+	"Iodine": {
+		"symbol": "I",
+		"atomic_number": 53,
+		"atomic_weight": 126.90447,
+		"lattice_structure": "ORC",
+		"name": "Iodine",
+		"color": "#C7C8CA"
+	},
+	"Xenon": {
+		"symbol": "Xe",
+		"atomic_number": 54,
+		"atomic_weight": 131.28999999999999,
+		"lattice_structure": "FCC",
+		"name": "Xenon",
+		"color": "#C7C8CA"
+	},
+	"Cesium": {
+		"symbol": "Cs",
+		"atomic_number": 55,
+		"atomic_weight": 132.90543,
+		"lattice_structure": "BCC",
+		"name": "Cesium",
+		"color": "#C7C8CA"
+	},
+	"Barium": {
+		"symbol": "Ba",
+		"atomic_number": 56,
+		"atomic_weight": 137.327,
+		"lattice_structure": "BCC",
+		"name": "Barium",
+		"color": "#C7C8CA"
+	},
+	"Lanthanum": {
+		"symbol": "La",
+		"atomic_number": 57,
+		"atomic_weight": 138.90549999999999,
+		"lattice_structure": "HEX",
+		"name": "Lanthanum",
+		"color": "#C7C8CA"
+	},
+	"Cerium": {
+		"symbol": "Ce",
+		"atomic_number": 58,
+		"atomic_weight": 140.11500000000001,
+		"lattice_structure": "FCC",
+		"name": "Cerium",
+		"color": "#C7C8CA"
+	},
+	"Praseodymium": {
+		"symbol": "Pr",
+		"atomic_number": 59,
+		"atomic_weight": 140.90764999999999,
+		"lattice_structure": "HEX",
+		"name": "Praseodymium",
+		"color": "#C7C8CA"
+	},
+	"Neodymium": {
+		"symbol": "Nd",
+		"atomic_number": 60,
+		"atomic_weight": 144.24000000000001,
+		"lattice_structure": "HEX",
+		"name": "Neodymium",
+		"color": "#C7C8CA"
+	},
+	"Promethium": {
+		"symbol": "Pm",
+		"atomic_number": 61,
+		"atomic_weight": 144.9127,
+		"lattice_structure": "n/a",
+		"name": "Promethium",
+		"color": "#C7C8CA"
+	},
+	"Samarium": {
+		"symbol": "Sm",
+		"atomic_number": 62,
+		"atomic_weight": 150.36000000000001,
+		"lattice_structure": "RHL",
+		"name": "Samarium",
+		"color": "#C7C8CA"
+	},
+	"Europium": {
+		"symbol": "Eu",
+		"atomic_number": 63,
+		"atomic_weight": 151.965,
+		"lattice_structure": "BCC",
+		"name": "Europium",
+		"color": "#C7C8CA"
+	},
+	"Gadolinium": {
+		"symbol": "Gd",
+		"atomic_number": 64,
+		"atomic_weight": 157.25,
+		"lattice_structure": "HEX",
+		"name": "Gadolinium",
+		"color": "#C7C8CA"
+	},
+	"Terbium": {
+		"symbol": "Tb",
+		"atomic_number": 65,
+		"atomic_weight": 158.92534000000001,
+		"lattice_structure": "HEX",
+		"name": "Terbium",
+		"color": "#C7C8CA"
+	},
+	"Dysprosium": {
+		"symbol": "Dy",
+		"atomic_number": 66,
+		"atomic_weight": 162.5,
+		"lattice_structure": "HEX",
+		"name": "Dysprosium",
+		"color": "#C7C8CA"
+	},
+	"Holmium": {
+		"symbol": "Ho",
+		"atomic_number": 67,
+		"atomic_weight": 164.93031999999999,
+		"lattice_structure": "HEX",
+		"name": "Holmium",
+		"color": "#C7C8CA"
+	},
+	"Erbium": {
+		"symbol": "Er",
+		"atomic_number": 68,
+		"atomic_weight": 167.25999999999999,
+		"lattice_structure": "HEX",
+		"name": "Erbium",
+		"color": "#C7C8CA"
+	},
+	"Thulium": {
+		"symbol": "Tm",
+		"atomic_number": 69,
+		"atomic_weight": 168.93421000000001,
+		"lattice_structure": "HEX",
+		"name": "Thulium",
+		"color": "#C7C8CA"
+	},
+	"Ytterbium": {
+		"symbol": "Yb",
+		"atomic_number": 70,
+		"atomic_weight": 173.03999999999999,
+		"lattice_structure": "FCC",
+		"name": "Ytterbium",
+		"color": "#C7C8CA"
+	},
+	"Lutetium": {
+		"symbol": "Lu",
+		"atomic_number": 71,
+		"atomic_weight": 174.96700000000001,
+		"lattice_structure": "HEX",
+		"name": "Lutetium",
+		"color": "#C7C8CA"
+	},
+	"Hafnium": {
+		"symbol": "Hf",
+		"atomic_number": 72,
+		"atomic_weight": 178.49000000000001,
+		"lattice_structure": "HEX",
+		"name": "Hafnium",
+		"color": "#C7C8CA"
+	},
+	"Tantalum": {
+		"symbol": "Ta",
+		"atomic_number": 73,
+		"atomic_weight": 180.9479,
+		"lattice_structure": "BCC",
+		"name": "Tantalum",
+		"color": "#C7C8CA"
+	},
+	"Tungsten": {
+		"symbol": "W",
+		"atomic_number": 74,
+		"atomic_weight": 183.84,
+		"lattice_structure": "BCC",
+		"name": "Tungsten",
+		"color": "#C7C8CA"
+	},
+	"Rhenium": {
+		"symbol": "Re",
+		"atomic_number": 75,
+		"atomic_weight": 186.20699999999999,
+		"lattice_structure": "HEX",
+		"name": "Rhenium",
+		"color": "#C7C8CA"
+	},
+	"Osmium": {
+		"symbol": "Os",
+		"atomic_number": 76,
+		"atomic_weight": 190.22999999999999,
+		"lattice_structure": "HEX",
+		"name": "Osmium",
+		"color": "#C7C8CA"
+	},
+	"Iridium": {
+		"symbol": "Ir",
+		"atomic_number": 77,
+		"atomic_weight": 192.22,
+		"lattice_structure": "FCC",
+		"name": "Iridium",
+		"color": "#C7C8CA"
+	},
+	"Platinum": {
+		"symbol": "Pt",
+		"atomic_number": 78,
+		"atomic_weight": 195.08000000000001,
+		"lattice_structure": "FCC",
+		"name": "Platinum",
+		"color": "#C7C8CA"
+	},
+	"Gold": {
+		"symbol": "Au",
+		"atomic_number": 79,
+		"atomic_weight": 196.96654000000001,
+		"lattice_structure": "FCC",
+		"name": "Gold",
+		"color": "#C7C8CA"
+	},
+	"Mercury": {
+		"symbol": "Hg",
+		"atomic_number": 80,
+		"atomic_weight": 200.59,
+		"lattice_structure": "RHL",
+		"name": "Mercury",
+		"color": "#C7C8CA"
+	},
+	"Thallium": {
+		"symbol": "Tl",
+		"atomic_number": 81,
+		"atomic_weight": 204.38329999999999,
+		"lattice_structure": "HEX",
+		"name": "Thallium",
+		"color": "#C7C8CA"
+	},
+	"Lead": {
+		"symbol": "Pb",
+		"atomic_number": 82,
+		"atomic_weight": 207.19999999999999,
+		"lattice_structure": "FCC",
+		"name": "Lead",
+		"color": "#C7C8CA"
+	},
+	"Bismuth": {
+		"symbol": "Bi",
+		"atomic_number": 83,
+		"atomic_weight": 208.98036999999999,
+		"lattice_structure": "RHL",
+		"name": "Bismuth",
+		"color": "#C7C8CA"
+	},
+	"Polonium": {
+		"symbol": "Po",
+		"atomic_number": 84,
+		"atomic_weight": 208.98240000000001,
+		"lattice_structure": "SC",
+		"name": "Polonium",
+		"color": "#C7C8CA"
+	},
+	"Astatine": {
+		"symbol": "At",
+		"atomic_number": 85,
+		"atomic_weight": 209.9871,
+		"lattice_structure": "n/a",
+		"name": "Astatine",
+		"color": "#C7C8CA"
+	},
+	"Radon": {
+		"symbol": "Rn",
+		"atomic_number": 86,
+		"atomic_weight": 222.01759999999999,
+		"lattice_structure": "FCC",
+		"name": "Radon",
+		"color": "#C7C8CA"
+	},
+	"Francium": {
+		"symbol": "Fr",
+		"atomic_number": 87,
+		"atomic_weight": 223.0197,
+		"lattice_structure": "BCC",
+		"name": "Francium",
+		"color": "#C7C8CA"
+	},
+	"Radium": {
+		"symbol": "Ra",
+		"atomic_number": 88,
+		"atomic_weight": 226.02539999999999,
+		"lattice_structure": "n/a",
+		"name": "Radium",
+		"color": "#C7C8CA"
+	},
+	"Actinium": {
+		"symbol": "Ac",
+		"atomic_number": 89,
+		"atomic_weight": 227.02780000000001,
+		"lattice_structure": "FCC",
+		"name": "Actinium",
+		"color": "#C7C8CA"
+	},
+	"Thorium": {
+		"symbol": "Th",
+		"atomic_number": 90,
+		"atomic_weight": 232.03809999999999,
+		"lattice_structure": "FCC",
+		"name": "Thorium",
+		"color": "#C7C8CA"
+	},
+	"Protactinium": {
+		"symbol": "Pa",
+		"atomic_number": 91,
+		"atomic_weight": 231.03587999999999,
+		"lattice_structure": "TET",
+		"name": "Protactinium",
+		"color": "#C7C8CA"
+	},
+	"Uranium": {
+		"symbol": "U",
+		"atomic_number": 92,
+		"atomic_weight": 238.02889999999999,
+		"lattice_structure": "ORC",
+		"name": "Uranium",
+		"color": "#C7C8CA"
+	},
+	"Neptunium": {
+		"symbol": "Np",
+		"atomic_number": 93,
+		"atomic_weight": 237.048,
+		"lattice_structure": "ORC",
+		"name": "Neptunium",
+		"color": "#C7C8CA"
+	},
+	"Plutonium": {
+		"symbol": "Pu",
+		"atomic_number": 94,
+		"atomic_weight": 244.0642,
+		"lattice_structure": "MCL",
+		"name": "Plutonium",
+		"color": "#C7C8CA"
+	},
+	"Americium": {
+		"symbol": "Am",
+		"atomic_number": 95,
+		"atomic_weight": 243.06139999999999,
+		"lattice_structure": "n/a",
+		"name": "Americium",
+		"color": "#C7C8CA"
+	},
+	"Curium": {
+		"symbol": "Cm",
+		"atomic_number": 96,
+		"atomic_weight": 247.0703,
+		"lattice_structure": "n/a",
+		"name": "Curium",
+		"color": "#C7C8CA"
+	},
+	"Berkelium": {
+		"symbol": "Bk",
+		"atomic_number": 97,
+		"atomic_weight": 247.0703,
+		"lattice_structure": "n/a",
+		"name": "Berkelium",
+		"color": "#C7C8CA"
+	},
+	"Californium": {
+		"symbol": "Cf",
+		"atomic_number": 98,
+		"atomic_weight": 251.0796,
+		"lattice_structure": "n/a",
+		"name": "Californium",
+		"color": "#C7C8CA"
+	},
+	"Einsteinium": {
+		"symbol": "Es",
+		"atomic_number": 99,
+		"atomic_weight": 252.083,
+		"lattice_structure": "n/a",
+		"name": "Einsteinium",
+		"color": "#C7C8CA"
+	},
+	"Fermium": {
+		"symbol": "Fm",
+		"atomic_number": 100,
+		"atomic_weight": 257.0951,
+		"lattice_structure": "n/a",
+		"name": "Fermium",
+		"color": "#C7C8CA"
+	},
+	"Mendelevium": {
+		"symbol": "Md",
+		"atomic_number": 101,
+		"atomic_weight": 258.10000000000002,
+		"lattice_structure": "n/a",
+		"name": "Mendelevium",
+		"color": "#C7C8CA"
+	},
+	"Nobelium": {
+		"symbol": "No",
+		"atomic_number": 102,
+		"atomic_weight": 259.10090000000002,
+		"lattice_structure": "n/a",
+		"name": "Nobelium",
+		"color": "#C7C8CA"
+	},
+	"Lawrencium": {
+		"symbol": "Lr",
+		"atomic_number": 103,
+		"atomic_weight": 262.11000000000001,
+		"lattice_structure": "n/a",
+		"name": "Lawrencium",
+		"color": "#C7C8CA"
+	},
+	"Rutherfordium": {
+		"symbol": "Rf",
+		"atomic_number": 104,
+		"atomic_weight": "[261]",
+		"lattice_structure": "n/a",
+		"name": "Rutherfordium",
+		"color": "#C7C8CA"
+	},
+	"Dubnium": {
+		"symbol": "Db",
+		"atomic_number": 105,
+		"atomic_weight": "[262]",
+		"lattice_structure": "n/a",
+		"name": "Dubnium",
+		"color": "#C7C8CA"
+	},
+	"Seaborgium": {
+		"symbol": "Sg",
+		"atomic_number": 106,
+		"atomic_weight": "[266]",
+		"lattice_structure": "n/a",
+		"name": "Seaborgium",
+		"color": "#C7C8CA"
+	},
+	"Bohrium": {
+		"symbol": "Bh",
+		"atomic_number": 107,
+		"atomic_weight": "[264]",
+		"lattice_structure": "n/a",
+		"name": "Bohrium",
+		"color": "#C7C8CA"
+	},
+	"Hassium": {
+		"symbol": "Hs",
+		"atomic_number": 108,
+		"atomic_weight": "[269]",
+		"lattice_structure": "n/a",
+		"name": "Hassium",
+		"color": "#C7C8CA"
+	},
+	"Meitnerium": {
+		"symbol": "Mt",
+		"atomic_number": 109,
+		"atomic_weight": "[268]",
+		"lattice_structure": "n/a",
+		"name": "Meitnerium",
+		"color": "#C7C8CA"
+	},
+	"Ununnilium": {
+		"symbol": "Uun",
+		"atomic_number": 110,
+		"atomic_weight": "[269]",
+		"lattice_structure": "n/a",
+		"name": "Ununnilium",
+		"color": "#C7C8CA"
+	},
+	"Unununium": {
+		"symbol": "Uuu",
+		"atomic_number": 111,
+		"atomic_weight": "[272]",
+		"lattice_structure": "n/a",
+		"name": "Unununium",
+		"color": "#C7C8CA"
+	},
+	"Ununbium": {
+		"symbol": "Uub",
+		"atomic_number": 112,
+		"atomic_weight": "[277]",
+		"lattice_structure": "n/a",
+		"name": "Ununbium",
+		"color": "#C7C8CA"
+	},
+	"Ununtrium": {
+		"symbol": "Uut",
+		"atomic_number": 113,
+		"atomic_weight": "n/a",
+		"lattice_structure": "n/a",
+		"name": "Ununtrium",
+		"color": "#C7C8CA"
+	},
+	"Ununquadium": {
+		"symbol": "Uuq",
+		"atomic_number": 114,
+		"atomic_weight": "[289]",
+		"lattice_structure": "n/a",
+		"name": "Ununquadium",
+		"color": "#C7C8CA"
+	},
+	"Ununpentium": {
+		"symbol": "Uup",
+		"atomic_number": 115,
+		"atomic_weight": "n/a",
+		"lattice_structure": "n/a",
+		"name": "Ununpentium",
+		"color": "#C7C8CA"
+	},
+	"Ununhexium": {
+		"symbol": "Uuh",
+		"atomic_number": 116,
+		"atomic_weight": "n/a",
+		"lattice_structure": "n/a",
+		"name": "Ununhexium",
+		"color": "#C7C8CA"
+	},
+	"Ununseptium": {
+		"symbol": "Uus",
+		"atomic_number": 117,
+		"atomic_weight": "n/a",
+		"lattice_structure": "n/a",
+		"name": "Ununseptium",
+		"color": "#C7C8CA"
+	},
+	"Ununoctium": {
+		"symbol": "Uuo",
+		"atomic_number": 118,
+		"atomic_weight": "n/a",
+		"lattice_structure": "n/a",
+		"name": "Ununoctium",
+		"color": "#C7C8CA"
+	}
+}

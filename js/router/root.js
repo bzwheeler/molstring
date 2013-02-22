@@ -11,7 +11,7 @@ define([
 		},
 
 		start : function() {
-			var View = new MolView();
+			var View = new MolView({el: '#jsgbox'});
 		}
 	});
 
