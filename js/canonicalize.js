@@ -8,7 +8,7 @@ function canonicalize(atoms) {
     atoms.sort(compare_rank);
     reduce(atoms);
     
-    while (atoms[-1].rank < atoms.length ) {
+    while (atoms[atoms.length-1].rank < atoms.length ) {
         apply_ranks(atoms);    
         set_primes(atoms);
         compute_extended_connectivity(atoms);
