@@ -110,7 +110,7 @@ define([
 				self.hook = board.addHook(function(e){
 					board.suspendUpdate();
 					var c = self.getCoords(e);
-					b.setPosition(JXG.COORDS_BY_USER, Math.round(c.usrCoords[1]), Math.round(c.usrCoords[2]));
+					b.setPosition(JXG.COORDS_BY_USER, [Math.round(c.usrCoords[1]), Math.round(c.usrCoords[2])]);
 					board.unsuspendUpdate();
 				}, 'mousemove');
 			}, 'mouseup');
@@ -181,6 +181,7 @@ define([
 		            strokeWidth:3
 		        };
 		    }
+
 		    var bond = this.board.create('segment', [atomA, atomB], options);
 		    if (secondary) {
 		        bond.secondary = true;
