@@ -1,8 +1,11 @@
 define([
+    'jQuery',
     'Underscore',
+    'Backbone',
     'util/attributes',
-    'model/Atom'
-], function(_, Attributes, Atom){
+    'model/Atom',
+    'model/Bond'
+], function($, _, Backbone, Attributes, Atom, Bond){
 
 /**************
 if a bond is NOT yet started:
@@ -23,25 +26,11 @@ if a bond IS started
     'esc' key, cancel the bond
 **************/
 
-    var Renderer = function(options) {
-        this.initialize(options);
-    };
-
     /*** CONSTANTS ***/
     var ATOM = 'atom',
         BOND = 'bond';
 
-    Attributes.readWrite(Renderer.prototype, [
-        'isBondInProgress',
-        'isDragging',
-        'isMouseDown',
-        'lastUpEvent',
-        'activeBond',
-        'lastPlacedAtom',
-        'startBondOnMove'
-    ]);
-
-    _.extend(Renderer.prototype, {
+    var View = Backbone.View.extend({
         initialize : function(options) {
             _.bindAll(this, 'onMouseDown', 'onMouseMove', 'onMouseUp');
             this.board = options.board;
@@ -90,10 +79,10 @@ if a bond IS started
                     var element = this.getObjectUnderMouse(e, [ATOM, BOND]);
                     if (this.lastUpEvent() && now - this.lastUpEvent().time < 250) {
                         this.startBondOnMove(false);
-                        console.log("selected", element);
+                        this.trigger('selected', element);
                     }
                     else if (!element) {
-                        this.startBond(element || this.addAtom(coords.x, coords.y));
+                        this.startBond(element || this.createAtom(coords.x, coords.y));
                     } else if (element.isAtom) {
                         this.lastPlacedAtom(element);
                         this.startBondOnMove(true);
@@ -109,42 +98,55 @@ if a bond IS started
             });
         },
 
-        addAtom : function(x, y, hidden) {
-            x = Math.round(x);
-            y = Math.round(y);
-            var element = new Atom();
-            var atom = this.board.create('point', [x, y], {
-                withLabel:false,
-                showInfobox:false,
-                visible:!hidden,
-                size:14,
-                fillColor: element.get('color'),
-                strokeColor: element.get('stroke_color')
-            });
+        createAtom : function(x, y) {
+            var self    = this,
+                element = new Atom(),
+                atom    = this.board.create('point', [Math.round(x), Math.round(y)], {
+                    withLabel:false,
+                    showInfobox:false,
+                    size:14,
+                    fillColor: element.get('color'),
+                    strokeColor: element.get('stroke_color')
+                });
 
-            atom.id = this.ATOM_COUNT++;
             atom.symbol = this.board.create('text', [
                 function(){
-                    return atom.X() - 0.2;
+                    var $el  = $(this.rendNode);
+                    var size = self.screenToUser($el.outerWidth(), 0);
+                    return atom.X() - size.x/2;
                 },
                 function(){
-                    return atom.Y() - 0.160;
+                    return atom.Y();
                 },
                 element.get('symbol')
-            ], {visible:!hidden});
-
-            atom.show = function() {
-                this.setAttribute({visible:true});
-                this.symbol.setAttribute({visible:true});
-            }
-
+            ]);
+            atom.model = element;
             atom.isAtom = true;
+
+            this.trigger('atom-added', element);
             
             return atom;
         },
 
+        createBond : function(atomA, atomB, trigger) {
+            var bond = this.board.create('segment', [atomA, atomB], {
+                strokeColor:'#000000',
+                strokeWidth:3
+            });
+            bond.start = atomA;
+            bond.end   = atomB;
+            bond.isBond = true;
+            bond.model  = new Bond();
+
+            if (trigger) {
+                this.trigger('bond-added', bond.model);
+            }
+
+            return bond;
+        },
+
         startBond : function(atom) {
-            var end  = this.addAtom(atom.X(), atom.Y(), true);
+            var end  = this.board.create('point', [atom.X(), atom.Y()], {visible:false});
             var bond = this.createBond(atom, end);
 
             this.activeBond(bond);
@@ -153,31 +155,18 @@ if a bond IS started
             return bond;
         },
 
-        createBond : function(atomA, atomB) {
-            var bond = this.board.create('segment', [atomA, atomB], {
-                strokeColor:'#000000',
-                strokeWidth:3
-            });
-            bond.start = atomA;
-            bond.end   = atomB;
-            bond.isBond = true;
-
-            return bond;
-        },
-
         completeBond : function(atom) {
             var bond = this.activeBond();
-            if (atom) {
-                this.board.removeObject(bond);
-                this.board.removeObject(bond.end);
-                this.board.removeObject(bond.end.symbol);
-                if (atom != bond.start) {
-                    bond = this.createBond(bond.start, atom);
-                } else {
-                    bond = null;
-                }
+
+            atom = atom || this.createAtom(bond.end.X(), bond.end.Y());
+
+            this.board.removeObject(bond);
+            this.board.removeObject(bond.end);
+            this.board.removeObject(bond.end.symbol);
+            if (atom != bond.start) {
+                bond = this.createBond(bond.start, atom, true);
             } else {
-                bond.end.show();
+                bond = null;
             }
 
             this.isBondInProgress(false);
@@ -210,6 +199,13 @@ if a bond IS started
             return new JXG.Coords(JXG.COORDS_BY_SCREEN, [dx, dy], this.board);
         },
 
+        screenToUser : function(x,y) {
+            return {
+                x : x/this.board.unitX,
+                y : y/this.board.unitY
+            };
+        },
+
         getObjectUnderMouse : function(e, types) {
             var under = this.board.getAllObjectsUnderMouse(e);
             for (var i in under) {
@@ -228,5 +224,15 @@ if a bond IS started
         }
     });
 
-    return Renderer;
+    Attributes.readWrite(View.prototype, [
+        'isBondInProgress',
+        'isDragging',
+        'isMouseDown',
+        'lastUpEvent',
+        'activeBond',
+        'lastPlacedAtom',
+        'startBondOnMove'
+    ]);
+
+    return View;
 });

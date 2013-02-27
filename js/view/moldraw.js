@@ -61,6 +61,15 @@ define([
 			board.addGrid();
 
             var jsxView = new JsxView({board:board});
+            jsxView.on('bond-added', function(bond) {
+                console.log('bond added', bond);
+            });
+            jsxView.on('atom-added', function(atom) {
+                console.log('atom added', atom);
+            });
+            jsxView.on('selected', function(element) {
+                console.log('selected', element);
+            })
 
 			return board;
 		},
