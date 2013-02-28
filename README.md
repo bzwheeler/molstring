@@ -1,4 +1,4 @@
 molstring
 =========
 
-Produces a canonical string from a array of atoms representing a molecular structure
+Produces a canonical string from an array of atoms representing a molecular structure
