@@ -4,8 +4,9 @@ define([
     'Backbone',
     'util/attributes',
     'model/Atom',
-    'model/Bond'
-], function($, _, Backbone, Attributes, Atom, Bond){
+    'model/Bond',
+    'view/atom'
+], function($, _, Backbone, Attributes, Atom, Bond, AtomView){
 
 /**************
 if a bond is NOT yet started:
@@ -99,33 +100,16 @@ if a bond IS started
         },
 
         createAtom : function(x, y) {
-            var self    = this,
-                element = new Atom(),
-                atom    = this.board.create('point', [Math.round(x), Math.round(y)], {
-                    withLabel:false,
-                    showInfobox:false,
-                    size:14,
-                    fillColor: element.get('color'),
-                    strokeColor: element.get('stroke_color')
-                });
-
-            atom.symbol = this.board.create('text', [
-                function(){
-                    var $el  = $(this.rendNode);
-                    var size = self.screenToUser($el.outerWidth(), 0);
-                    return atom.X() - size.x/2;
-                },
-                function(){
-                    return atom.Y();
-                },
-                element.get('symbol')
-            ]);
-            atom.model = element;
-            atom.isAtom = true;
-
-            this.trigger('atom-added', element);
+            var atom = new AtomView({
+                model : new Atom(),
+                board : this.board,
+                x     : x,
+                y     : y
+            });
             
-            return atom;
+            this.trigger('atom-added', atom);
+            
+            return atom.renderer;
         },
 
         createBond : function(atomA, atomB, trigger) {
@@ -197,13 +181,6 @@ if a bond IS started
             dy       = absPos[1]-cPos[1];
             
             return new JXG.Coords(JXG.COORDS_BY_SCREEN, [dx, dy], this.board);
-        },
-
-        screenToUser : function(x,y) {
-            return {
-                x : x/this.board.unitX,
-                y : y/this.board.unitY
-            };
         },
 
         getObjectUnderMouse : function(e, types) {
